@@ -19,11 +19,12 @@ body {
     width: 100vw;
     height: 100vh;
 
-    background-image: url("bilder/hintergrund.jpg");
+    background-image: url("images/mainbackgrounds/Januar.png");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+   
 
     position: relative;
 }
@@ -31,15 +32,16 @@ body {
 
 /* Handy */
 .handy {
-
+    
     position: absolute;
 
-    right: 8%;
-    top: 50%;
+    right: 2%;
+    top: 65%;
+    
 
     transform: translateY(-50%);
 
-    height: 90vh;
+    height: 70vh;
 }
 
 
