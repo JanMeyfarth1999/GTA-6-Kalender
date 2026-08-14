@@ -1,0 +1,53 @@
+/* Standardabstände des Browsers entfernen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Gesamte Webseite */
+body {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Hintergrund der Kalenderseite */
+.kalender-seite {
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("bilder/hintergrund.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+/* Handy */
+.handy {
+
+    position: absolute;
+
+    right: 8%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    height: 90vh;
+}
+
+
+/* Handybild */
+.handy img {
+
+    height: 100%;
+    width: auto;
+
+    display: block;
+}
