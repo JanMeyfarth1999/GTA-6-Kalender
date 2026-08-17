@@ -1,78 +1,102 @@
 <!DOCTYPE html>
-    <html lang="de">
-        <head>  
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>GTA 6 Kalender</title>
-            <link rel="stylesheet" href="style.css">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-        </head>
-            <body>
-                <div class="hud-frame">
-                    <h1 id="main-headline" class="wichtige_überschrift">Kalenderdatenblatt <br><br> vom <br><br> 21.07.2026</h1>
-                </div>  
-                <!--Gesamte Kalender-Seite -->
-                <main class="kalender-seite">
-                    <!--Historische Ereignisse-->
-                    <div id="historischeBox">
-                        <h2>Historische Ereignisse</h2>
-                        <div id="historischeEreignisse">
-                            <p id="ereignis1"></p>
-                            <p id="ereignis2"></p>
-                            <p id="ereignis3"></p>
-                            <p id="ereignis4"></p>
-                            <p id="ereignis5"></p>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA 6 Kalender</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hud-frame">
+        <h1 id="main-headline" class="wichtige_überschrift">Kalenderdatenblatt <br><br> vom <br><br> 21.07.2026</h1>
+    </div>
+    <!--Gesamte Kalender-Seite -->
+    <main class="kalender-seite">
+        <!--Historische Ereignisse-->
+        <div id="historischeBox">
+            <h2>Historische Ereignisse</h2>
+            <div id="historischeEreignisse">
+                <p id="ereignis1"></p>
+                <p id="ereignis2"></p>
+                <p id="ereignis3"></p>
+                <p id="ereignis4"></p>
+                <p id="ereignis5"></p>
+            </div>
+        </div>
+
+
+
+
+        <!-- iFruit Handy -->
+        <div class="handy">
+            <img src="images/phones/Januar.png" alt="iFruit Handy" id="handyBild">
+            <!-- Kalender-App -->
+            <img src="images/phones/calendar/KAlenderRoh.png" alt="Kalender" id="kalenderBild">
+            <!--Dynamischer Kalender-->
+            <div id="kalender">
+                <div class="monatsNavigation">
+                    <button id="monatZurueck">❮</button>
+                    <h2 id="kalenderMonat"></h2>
+                    <Button id="monatVor">❯</Button>
+                </div>
+                <!-- GTA 6 Countdown -->
+                <div id="gtaCountdown">
+
+                    <h3>GTA VI RELEASE</h3>
+
+                    <div id="countdownZeit">
+
+                        <div class="countdownTeil">
+                            <span id="countdownTage">0</span>
+                            <small>TAGE</small>
                         </div>
+
+                        <div class="countdownTeil">
+                            <span id="countdownStunden">0</span>
+                            <small>STD</small>
                         </div>
 
-
-
-
-                    <!-- iFruit Handy -->
-                     <div class="handy">
-                        <img
-                            src="images/phones/Januar.png"
-                            alt="iFruit Handy"
-                            id="handyBild"
-                        >
-                    <!-- Kalender-App -->
-                        <img
-                            src="images/phones/calendar/KAlenderRoh.png"
-                            alt="Kalender"
-                            id="kalenderBild"
-                        >  
-                    <!--Dynamischer Kalender-->
-                        <div id="kalender"> 
-                        <div class="monatsNavigation">
-                            <button id="monatZurueck">❮</button>
-                            <h2 id="kalenderMonat"></h2>
-                            <Button id="monatVor">❯</Button>
-                        </div>    
-                        <div class="wochentage">
-                            <span>Mo</span>
-                            <span>Di</span>
-                            <span>Mi</span>
-                            <span>Do</span>
-                            <span>Fr</span>
-                            <span class="samstag">Sa</span>
-                            <span class="sonntag">So</span>
+                        <div class="countdownTeil">
+                            <span id="countdownMinuten">0</span>
+                            <small>MIN</small>
                         </div>
-                        <div id="kalenderTage"></div> 
-                        </div>   
-                     </div>
-                     <!--Titel-Logo-->
-                        <img
-                            src="images/Logo/logo.png"
-                            alt="Logo"
-                            id="logoBild"
-                        >
-                </main>
 
-                <script src="script.js"></script>
+                        <div class="countdownTeil">
+                            <span id="countdownSekunden">0</span>
+                            <small>SEK</small>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="wochentage">
+                    <span>Mo</span>
+                    <span>Di</span>
+                    <span>Mi</span>
+                    <span>Do</span>
+                    <span>Fr</span>
+                    <span class="samstag">Sa</span>
+                    <span class="sonntag">So</span>
+                </div>
+                <div id="kalenderTage"></div>
+            </div>
+        </div>
+        <!--Titel-Logo-->
+        <img src="images/Logo/logo.png" alt="Logo" id="logoBild">
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/feiertage.js"></script>
+    <script src="js/historie.js"></script>
+    <script src="js/kalender.js"></script>
+    <script src="js/timer.js"></script>
 
 
-            </body>
+</body>
 
-    </html>
+</html>
