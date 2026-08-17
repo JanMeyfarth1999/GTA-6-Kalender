@@ -48,7 +48,7 @@ body {
     position: absolute;
     z-index: 100;
     margin-left: 105px;
-    top: 74%;
+    top: 75%;
 }
 /* Aussehen der Überschrift */
 .wichtige_überschrift {
@@ -76,38 +76,89 @@ body {
     color: black;
     text-align: center;
 }
-/*Monatsüberschrift*/
+/* Monatsüberschrift */
 #kalenderMonat {
     font-size: 18px;
+    margin: 0;
+}
+
+
+/* Monatswechsel */
+.monatsNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     margin-bottom: 10px;
 }
-/*Wochentage*/
+
+
+/* Pfeile */
+.monatsNavigation button {
+    background: none;
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Effekt beim Darüberfahren */
+.monatsNavigation button:hover {
+    transform: scale(1.2);
+}
+
+
+/* Wochentage */
 .wochentage {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+
     font-size: 11px;
     font-weight: bold;
+
     margin-bottom: 8px;
+
     text-shadow: 1px 1px 1px rgba(0, 0, 1, 0.9);
 }
-/*Bereich für die Tageszahlen*/
+
+
+/* Bereich für die Tageszahlen */
 #kalenderTage {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+
     font-size: 12px;
     row-gap: 8px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 1, 0.9);
 
+    text-shadow: 1px 1px 1px rgba(0, 0, 1, 0.9);
 }
-.samstag{
+
+
+.samstag {
     color: blue;
 }
-.sonntag{
+
+
+.sonntag {
     color: red;
 }
+
+
 /* Einzelner Kalendertag */
 .kalenderTag {
     position: relative;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease;
+}
+
+.kalenderTag:hover {
+    transform: scale(1.3);
+    font-weight: bold;
 }
 
 
@@ -126,4 +177,45 @@ body {
     z-index: 5;
 
     pointer-events: none;
+}
+/* Gesetzlicher Feiertag in Hessen */
+.feiertag {
+    background-color: yellow;
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+/*Historische Ereignisse*/
+#historischeBox {
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    width: 650px;
+    min-height: 320px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    z-index: 50;
+
+}
+/* Überschrift */
+#historischeBox h2 {
+    font-family: "Bowlby One SC", sans-serif;
+    text-shadow: 5px 5px 5px rgba(0, 0, 4, 0.9);
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+}
+
+
+/* Einzelne Ereignisse */
+#historischeEreignisse p {
+    font-size: 15px;
+
+    margin-bottom: 8px;
 }
