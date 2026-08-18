@@ -71,7 +71,7 @@ body {
 /*Dynamischer Kalender*/
 #kalender {
     position: absolute;
-    top: 25%;
+    top: 21%;
     left: 17%;
     width: 66%;
     z-index: 3;
