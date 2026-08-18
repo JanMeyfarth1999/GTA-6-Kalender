@@ -23,9 +23,11 @@ body {
 .handy {
     position: absolute;
     right: 3%;
-    top: 80%;
-    transform: translateY(-70%);
-    height: 65vh;
+    bottom: 0%;
+    height: clamp(300px, 65vh, 750px);
+
+    
+
 }    
 /* Handybild */
 #handyBild {
@@ -54,7 +56,7 @@ body {
 .wichtige_überschrift {
     font-family: "Bowlby One SC", sans-serif;
     color: white;
-    font-size: 25px;
+    font-size: clamp(18px, 1.5vw, 30px);
     text-shadow: 5px 5px 5px rgba(0, 0, 4, 0.9);
     -webkit-text-stroke: 2px black;
     text-align: center;
@@ -78,7 +80,7 @@ body {
 }
 /* Monatsüberschrift */
 #kalenderMonat {
-    font-size: 18px;
+    font-size: clamp(12px, 1.7vh, 20px);
     margin: 0;
 }
 
@@ -98,7 +100,7 @@ body {
     background: none;
     border: none;
 
-    font-size: 18px;
+    font-size: clamp(12px, 1.7vh, 20px);
     font-weight: bold;
 
     cursor: pointer;
@@ -116,7 +118,7 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 
-    font-size: 11px;
+    font-size: clamp(8px, 1.1vh, 13px);
     font-weight: bold;
 
     margin-bottom: 8px;
@@ -190,10 +192,10 @@ body {
     position: absolute;
     top: 3%;
     right: 4%;
-    width: 650px;
-    min-height: 320px;
-    padding: 15px;
-    background-color: rgba(78, 76, 74, 0.315);
+    width: clamp(300px, 40vw, 650px);
+    min-height: clamp(220px, 30vh, 320px);
+    padding: clamp(8px, 1vw, 15px);
+    background-color: rgba(36, 35, 34, 0.6);
     border: 2px solid white;
     border-radius: 10px;
     color: white;
@@ -205,9 +207,9 @@ body {
     font-family: "Bowlby One SC", sans-serif;
     text-shadow: 5px 5px 5px rgba(0, 0, 4, 0.9);
 
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 23px);
 
-    margin-bottom: 12px;
+    margin-bottom: clamp(6px, 0.8vw, 12px);
 
     text-align: center;
 }
@@ -215,9 +217,9 @@ body {
 
 /* Einzelne Ereignisse */
 #historischeEreignisse p {
-    font-size: 15px;
+    font-size: clamp(13px, 1vw, 17px);
 
-    margin-bottom: 8px;
+    margin-bottom: clamp(4px, 0.5vw, 8px);
 }
 /* ========================================
    GTA 6 COUNTDOWN
@@ -285,3 +287,34 @@ body {
 
     margin-top: 2px;
 }
+
+#wochentagInfo {
+    position: absolute;
+
+    top: 105%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 70%;
+
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    color: black;
+
+    z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+
+

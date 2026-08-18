@@ -147,6 +147,22 @@ function kalenderAnzeigen() {
             "kalenderTag"
         );
 
+        // ========================================
+        // KLICK AUF EINEN KALENDERTAG
+        // ========================================
+
+        tagElement.addEventListener(
+            "click",
+            function () {
+
+                wochentagImJahrBerechnen(
+                    tag,
+                    angezeigterMonat,
+                    angezeigtesJahr
+                );
+            }
+        );
+
 
         // ====================================
         // KLICK AUF EINEN TAG
@@ -318,3 +334,73 @@ historischeEreignisseLaden(
     heute.getDate(),
     heute.getMonth() + 1
 );
+
+// ========================================
+// WIEVIELTER WOCHENTAG IM JAHR?
+// ========================================
+
+function wochentagImJahrBerechnen(tag, monat, jahr) {
+
+    const datum =
+        new Date(jahr, monat, tag);
+
+
+    // Wochentagsnamen
+    const wochentage = [
+        "Sonntag",
+        "Montag",
+        "Dienstag",
+        "Mittwoch",
+        "Donnerstag",
+        "Freitag",
+        "Samstag"
+    ];
+
+
+    // Wochentag des ausgewählten Datums
+    const wochentagNummer =
+        datum.getDay();
+
+
+    const wochentagName =
+        wochentage[wochentagNummer];
+
+
+    // Zähler
+    let anzahl = 0;
+
+
+    // Beim 1. Januar anfangen
+    const pruefDatum =
+        new Date(jahr, 0, 1);
+
+
+    // Jeden Tag bis zum ausgewählten Datum durchgehen
+    while (pruefDatum <= datum) {
+
+        // Hat dieser Tag den gleichen Wochentag?
+        if (
+            pruefDatum.getDay() ===
+            wochentagNummer
+        ) {
+
+            anzahl++;
+        }
+
+
+        // Einen Tag weiter
+        pruefDatum.setDate(
+            pruefDatum.getDate() + 1
+        );
+    }
+
+
+    // Ergebnis anzeigen
+    document.getElementById(
+        "wochentagInfo"
+    ).textContent =
+        anzahl +
+        ". " +
+        wochentagName +
+        " im Jahr";
+}
