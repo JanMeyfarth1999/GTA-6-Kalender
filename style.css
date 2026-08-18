@@ -25,9 +25,6 @@ body {
     right: 3%;
     bottom: 0%;
     height: clamp(300px, 65vh, 750px);
-
-    
-
 }    
 /* Handybild */
 #handyBild {
@@ -83,108 +80,73 @@ body {
     font-size: clamp(12px, 1.7vh, 20px);
     margin: 0;
 }
-
-
 /* Monatswechsel */
 .monatsNavigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin-bottom: 10px;
 }
-
-
 /* Pfeile */
 .monatsNavigation button {
     background: none;
     border: none;
-
     font-size: clamp(12px, 1.7vh, 20px);
     font-weight: bold;
-
     cursor: pointer;
 }
-
-
 /* Effekt beim Darüberfahren */
 .monatsNavigation button:hover {
     transform: scale(1.2);
 }
-
-
 /* Wochentage */
 .wochentage {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-
     font-size: clamp(8px, 1.1vh, 13px);
     font-weight: bold;
-
     margin-bottom: 8px;
-
     text-shadow: 1px 1px 1px rgba(0, 0, 1, 0.9);
 }
-
-
 /* Bereich für die Tageszahlen */
 #kalenderTage {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-
     font-size: 12px;
     row-gap: 8px;
-
     text-shadow: 1px 1px 1px rgba(0, 0, 1, 0.9);
 }
-
-
 .samstag {
     color: blue;
 }
-
-
 .sonntag {
     color: red;
 }
-
-
 /* Einzelner Kalendertag */
 .kalenderTag {
     position: relative;
-
     cursor: pointer;
-
     transition: transform 0.15s ease;
 }
-
 .kalenderTag:hover {
     transform: scale(1.3);
     font-weight: bold;
 }
-
-
 /* Fadenkreuz für den heutigen Tag */
 .fadenkreuz {
     position: absolute;
-
     width: 30px;
     height: 30px;
-
     left: 50%;
     top: 50%;
-
     transform: translate(-50%, -50%);
-
     z-index: 5;
-
     pointer-events: none;
 }
 /* Gesetzlicher Feiertag in Hessen */
 .feiertag {
     background-color: yellow;
     border-radius: 50%;
-
     font-weight: bold;
 }
 /*Historische Ereignisse*/
@@ -200,34 +162,25 @@ body {
     border-radius: 10px;
     color: white;
     z-index: 50;
-
 }
 /* Überschrift */
 #historischeBox h2 {
     font-family: "Bowlby One SC", sans-serif;
     text-shadow: 5px 5px 5px rgba(0, 0, 4, 0.9);
-
     font-size: clamp(14px, 1.5vw, 23px);
-
     margin-bottom: clamp(6px, 0.8vw, 12px);
-
     text-align: center;
 }
-
-
 /* Einzelne Ereignisse */
 #historischeEreignisse p {
     font-size: clamp(13px, 1vw, 17px);
-
     margin-bottom: clamp(4px, 0.5vw, 8px);
 }
 /* ========================================
    GTA 6 COUNTDOWN
    ======================================== */
-
 #gtaCountdown {
     position: absolute;
-
     /* Position innerhalb des Handys */
     margin-top: 70%;
     left: 12.5%;
@@ -235,76 +188,49 @@ body {
     border-radius: 10px;
     background-color: rgba(240, 247, 246, 0.7);
     padding: 5%;
-
     width: 75%;
-
     z-index: 4;
-
     text-align: center;
     color: black;
 }
-
-
 /* Überschrift */
 #gtaCountdown h3 {
     font-family: "Bowlby One SC", sans-serif;
-
     font-size: 12px;
-
     margin-bottom: 8px;
 }
-
-
 /* Zahlen nebeneinander */
 #countdownZeit {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 }
-
-
 /* Einzelner Bereich */
 .countdownTeil {
     display: flex;
     flex-direction: column;
-
     align-items: center;
 }
-
-
 /* Zahlen */
 .countdownTeil span {
     font-family: "Bowlby One SC", sans-serif;
-
     font-size: 14px;
 }
-
-
 /* TAGE / STD / MIN / SEK */
 .countdownTeil small {
     font-size: 7px;
-
     margin-top: 2px;
 }
-
 #wochentagInfo {
     position: absolute;
-
     top: 105%;
     left: 50%;
-
     transform: translateX(-50%);
-
     width: 70%;
-
     text-align: center;
-
     font-size: 12px;
     font-weight: bold;
-
     color: black;
-
     z-index: 5;
 }
 
