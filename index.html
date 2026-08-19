@@ -12,9 +12,7 @@
 </head>
 
 <body>
-    <div class="hud-frame">
-        <h1 id="main-headline" class="wichtige_überschrift">Kalenderdatenblatt <br><br> vom <br><br> 21.07.2026</h1>
-    </div>
+    
     <!--Gesamte Kalender-Seite -->
     <main class="kalender-seite"> 
         <!--Historische Ereignisse-->
@@ -44,6 +42,17 @@
                     <h2 id="kalenderMonat"></h2>
                     <Button id="monatVor">❯</Button>
                 </div>
+                <div class="wochentage">
+                    <span>Mo</span>
+                    <span>Di</span>
+                    <span>Mi</span>
+                    <span>Do</span>
+                    <span>Fr</span>
+                    <span class="samstag">Sa</span>
+                    <span class="sonntag">So</span>
+                </div>
+                <div id="kalenderTage"></div>
+            </div>
                 <div id="wochentagInfo"></div>
                 <!-- GTA 6 Countdown -->
                 <div id="gtaCountdown">
@@ -75,20 +84,16 @@
                     </div>
 
                 </div>
-                <div class="wochentage">
-                    <span>Mo</span>
-                    <span>Di</span>
-                    <span>Mi</span>
-                    <span>Do</span>
-                    <span>Fr</span>
-                    <span class="samstag">Sa</span>
-                    <span class="sonntag">So</span>
-                </div>
-                <div id="kalenderTage"></div>
-            </div>
+             
+            
         </div>
+        <div class="logoBereich">
         <!--Titel-Logo-->
         <img src="images/Logo/logo.png" alt="Logo" id="logoBild">
+        <div class="hud-frame">
+        <h1 id="main-headline" class="wichtige_überschrift">Kalenderdatenblatt <br><br> vom <br><br> 21.07.2026</h1>
+    </div>
+    </div>
     </main>
 
     <script src="js/main.js"></script>
